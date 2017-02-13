@@ -15,6 +15,7 @@
         /* IE标准@type {ActiveXObject}*/
         xhr = new ActiveXObject('Microsoft.XMLHTTP')
     }
+    /*调用xhr的onreadystatechange函数执行回调函数*/
     xhr.onreadystatechange = function () {
         if (xhr.readyState == 4){
             var status = xhr.status;
@@ -42,8 +43,8 @@
         var arr = [];
         for (var param in data){
             arr.push(encodeURIComponent(param) + '=' +encodeURIComponent(data[param]));
-        }
-        arr.push(('randomNumber=' + Math.random()).replace('.'));
-        return arr.join('&');}
+        };
+        return arr.join('&');
+    }
     window["Ajax"] = Ajax;
 })();
