@@ -6,8 +6,8 @@ Ajax({
     url:"js/data.json",
     type:"get",
     dataType:"json",
+    async: true,
     data:{"name":"gaoxiang","lastName":"lyx"},
-    beforeSend:function(){},
     success:function(data){},
     fail:function(ex){
         console.log(ex);
